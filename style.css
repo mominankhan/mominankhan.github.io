@@ -7,7 +7,7 @@ html, body {
   
   html {
     font-size: 10px;
-    background-color: #a9a9a9;
+    background-color: #a5c2f0;
   }
   
   body {
@@ -19,7 +19,7 @@ html, body {
   /* || typography */
   
   h1, h2, h3 {
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Baloo Tammudu 2',  weight, bold;
     color: #2a2a2a;
   }
   
