@@ -1,8 +1,9 @@
 header
-{
-Background-color: #b37460;
-}
+html {
+    font-size: 10px;
+    background-color: #b37460;
 
+}
 .topright {
 position: absolute;
 Top:8px;
