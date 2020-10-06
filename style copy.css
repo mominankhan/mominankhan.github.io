@@ -1,0 +1,47 @@
+header
+{
+Background-color: #b37460;
+}
+
+.topright {
+position: absolute;
+Top:8px;
+right: 16px;
+font-size: 18px;
+}
+.logo {
+Margin-right: float;
+top:8px;
+right: 16px;
+font-size: 18px;
+}
+.header {
+Alight-items:center;
+Width; 100%;
+Display: flex;
+Background-color: #7D3A24;
+}
+
+.container {
+Min-width: 960px;
+Main-top: 15px;
+}
+
+.wrapper {
+Display: flex;
+Flex-wrap; nowrap;
+}
+
+.block1{
+Flex-basis:33.33%;
+}
+
+.block2{
+Flex-basis:66.66%;
+}
+
+Img2{
+Border-radius: 4px;
+Border:1 px solid black;
+Width: 100%;
+}
