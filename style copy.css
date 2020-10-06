@@ -16,20 +16,20 @@ right: 16px;
 font-size: 18px;
 }
 .header {
-Alight-items:center;
-Width; 100%;
+Align-items:center;
+Width: 100%;
 Display: flex;
 Background-color: #7D3A24;
 }
 
 .container {
 Min-width: 960px;
-Main-top: 15px;
+top: 15px;
 }
 
 .wrapper {
 Display: flex;
-Flex-wrap; nowrap;
+Flex-wrap: nowrap;
 }
 
 .block1{
