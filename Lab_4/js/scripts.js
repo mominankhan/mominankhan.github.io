@@ -5,7 +5,7 @@ myHeading.textContent = "Momina Khan's Lab 4"
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 var div = documnet.querySelector('content');
-var p = document.createElement('p');
+var paragraph = document.createElement('p');
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
 p = "My name has + '6' + characters."
