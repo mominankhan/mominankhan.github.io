@@ -5,23 +5,33 @@ element.textContent = "Momina Khan's Lab 4";
 
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
-var paragraphs = document.querySelector('div.content');
-var para1 = document.createElement("p1");
-var para2 = document.createElement("p2");
+paragraph1.appendChild(p1);
+paragraph2.appendChild(p2);
+
+
+var paragraphs = document.querySelector(".content");
+p1.appendChild(paragraph1);
+p2.appendChild(paragraph2);
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-document.getElementById("p1").innerHTML = "My name has" + '10' + "characters.";
+var totalCharacters = "My name has" + myfullName.length + "characters.";
+paragraph1.appent(totalCharacters);
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
-document.getElementById("p1").innerHTML = "m";
+
 // 6 Add a new line to your second paragraph
-para2.innerText =+ "\n";
+var thirdCharacter = "The third character of my last name is" + myfullName.charAt(2).toUpperCase();
+paragraph2.appent(thirdCharacter);
 
 // 7 Return the final three characters of your last name to that new line
-
+paragraph2.appent("\n");
+var finalthree = "The last three characters in my name are" + myfullName.substring(myfullName.length - 3)
+paragraph2.append(finalthree);
 // 8 Substring your first and last name into two separate variables
-
+var fullname = myfullName.substring(0,6);
+var lastname = myfullName.substring(7,10);
 // 9 Add the total length of your first and last names together
-
+var namelength = fullname.length + lastname.length; 
 // 10 Display that total next to your name in your header
+document.querySelector("header").append("the length of my first and last name is:" + namelength);
