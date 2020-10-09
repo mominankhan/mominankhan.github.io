@@ -5,8 +5,8 @@ element.textContent = "Momina Khan's Lab 4";
 
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
-var p1 = document.createElement("p");
-var p2 = document.createElement("p");
+var p1 = document.createElement("p1");
+var p2 = document.createElement("p2");
 var element = docoument.querySelector('div.content');
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
