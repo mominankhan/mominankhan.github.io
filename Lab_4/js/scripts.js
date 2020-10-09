@@ -14,7 +14,7 @@ var para2 = document.createElement("p2");
 document.getElementById("p1").innerHTML = "My name has" + '10' + "characters.";
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
-
+document.getElementById("p1").innerHTML = "m";
 // 6 Add a new line to your second paragraph
 para2.innerText =+ "\n";
 
