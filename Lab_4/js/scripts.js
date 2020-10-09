@@ -8,11 +8,10 @@ element.textContent = "Momina Khan's Lab 4";
 var paragraphs = document.getElementById('div.content');
 var para1 = document.createElement("p1");
 var para2 = document.createElement("p2");
-//var element = docoument.querySelector('div.content');
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-document.getElementById('div.content').innerHTML = "My name has" + '10' + "characters.";
+document.getElementById("p1").innerHTML = "My name has" + '10' + "characters.";
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 
