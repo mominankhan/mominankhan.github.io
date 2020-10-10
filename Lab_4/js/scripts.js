@@ -5,10 +5,6 @@ element.textContent = "Momina Khan's Lab 4";
 
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
-paragraph1.appendChild(paragraph1);
-paragraph2.appendChild(paragraph2);
-
-
 var paragraphs = document.querySelector(".content");
 p1.appendChild(paragraph1);
 p2.appendChild(paragraph2);
