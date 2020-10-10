@@ -8,6 +8,8 @@ element.textContent = "Momina Khan's Lab 4";
 
 //paragraph1.appendChild(p1);
 //paragraph2.appendChild(paragraph2);
+var p1; 
+var p2;
 
 paragraph1 = p1;
 paragraph2 = p2;
