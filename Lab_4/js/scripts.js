@@ -8,15 +8,15 @@ element.textContent = "Momina Khan's Lab 4";
 
 //paragraph1.appendChild(p1);
 //paragraph2.appendChild(paragraph2);
-var p1; 
-var p2;
+var content = document.querySelector('div.content');
 
-paragraph1 = p1;
-paragraph2 = p2;
+var p1 = document.createElement("p");
+p1.setAttribute('class', 'p1');
+content.appendChild(p1);
 
-var paragraphs = document.querySelector(".content");
-p1.appendChild(paragraph1);
-p2.appendChild(paragraph2);
+var p2 = document.createElement("p"); 
+p1.setAttribute('class', 'p1');
+content.appendChild(p2);
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
