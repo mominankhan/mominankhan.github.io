@@ -5,8 +5,8 @@ element.textContent = "Momina Khan's Lab 4";
 
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
-paragraph1.appendChild(p1);
-paragraph2.appendChild(p2);
+paragraph1.appendChild(paragraph1);
+paragraph2.appendChild(paragraph2);
 
 
 var paragraphs = document.querySelector(".content");
@@ -25,7 +25,7 @@ var thirdCharacter = "The third character of my last name is" + myFullName.charA
 paragraph2.append(thirdCharacter);
 
 // 7 Return the final three characters of your last name to that new line
-paragraph2.append("\n");
+paragraph2.append("\n");s finsi
 var finalthree = "The last three characters in my name are" + myFullName.substring(myFullName.length - 3, myFullName.length);
 paragraph2.append(finalthree);
 // 8 Substring your first and last name into two separate variables
