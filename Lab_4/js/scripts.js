@@ -9,6 +9,8 @@ element.textContent = "Momina Khan's Lab 4";
 //paragraph1.appendChild(p1);
 //paragraph2.appendChild(paragraph2);
 
+paragraph1 = p1;
+paragraph2 = p2;
 
 var paragraphs = document.querySelector(".content");
 p1.appendChild(paragraph1);
