@@ -20,8 +20,8 @@ content.appendChild(p2);
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-var totalCharacters = "My name has" + myFullName.length + "characters.";
-paragraph1.append(totalCharacters);
+var thirdCharacter = "The third character of my last name is" + myFullName.charAt(2).toUpperCase();
+p2.textContent = thirdCharacter;
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 
