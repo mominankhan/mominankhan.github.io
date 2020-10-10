@@ -15,7 +15,7 @@ p1.setAttribute('class', 'p1');
 content.appendChild(p1);
 
 var p2 = document.createElement("p"); 
-p1.setAttribute('class', 'p1');
+p1.setAttribute('class', 'p2');
 content.appendChild(p2);
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
