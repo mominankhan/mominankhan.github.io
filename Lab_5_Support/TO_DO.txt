@@ -1,0 +1,8 @@
+1) Ensure that you can run "node --version" from the command line. If you cannot, please contact me or Andrew.
+
+2) Join a project team and update Canvas project teams.
+
+3) Have you tried out glitch.com yet? I'm new to it. It seems to work really well for quick debugging.
+
+
+
