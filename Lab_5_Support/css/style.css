@@ -1,0 +1,76 @@
+
+.flexbox-container{
+    display: flex;
+    background-color: #e6f0e3;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-start;*/ /* default is stretch */
+
+    /* 2
+        If we set it to flex-direction: column
+    */
+    /*flex-direction: column; *//* Now if yoou use
+                justify content: center they don't center horizontally
+                that's because they are centering inside the column
+                vertically */
+    /* if we put a height on the container we can more easily see
+        that they are centered vertically */
+    /*justify-content: center;
+    height: 800px;*/
+    /* That's because justify-content is using the main axis which at this
+        point is column vs row.
+    */
+    /* if we use align items: center, we can now center horizontally */
+    /*align-items: center;*/
+
+}
+.flexbox-item-1{
+    min-height: 100px;
+    width : 10%;
+    flex: 1;
+    background-color: aqua ;
+    text-align: center;
+    justify-content: space-around;
+    margin:10px;
+}
+
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+.button1 { 
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+.button2 { 
+    background-color: #1411da; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin:10;
+  }
+
+.mydiv { 
+    background-color: #be1694; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
