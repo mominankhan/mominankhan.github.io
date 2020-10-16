@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="flexbox-container">
+        <h1>Sample Header</h1>
+        <div><a href="">anchor tag to nowhere</a></div>
+        <div class="button1" ><button onclick="alertMe(18)">Click me!</button></div>
+        <div class="button2" id="secondbutton"><button >Click me 2!</button></div>
+        <div class="flexbox-item-1" id="textbox1"><p>World #2</p></div> 
+    </div>
+    <script>
+        // Supporting function
+        function toFahrenheit(celsius){
+            return (celsius *1.8) + 32;
+        }
+
+        //THis function added in HTML element
+        // calling a function within an event
+        function alertMe(display){
+            alert(toFahrenheit(display));
+             var box = document.getElementById('textbox1');
+            //var box = document.getElementById('#p.flexbox-item-1');
+            box.style.backgroundColor = '#4CAF50';
+           
+        }
+
+        // This element is 'dynamically' added
+        // calling a function within an event
+        document.getElementById('secondbutton').addEventListener("click", function(){
+            alert(toFahrenheit(67));
+            var box = document.getElementById('textbox1');
+            box.style.backgroundColor = 'blue';
+        })
+    </script>
+</body>
+</html>
