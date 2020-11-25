@@ -11,7 +11,7 @@ async function getData() {
     await fetch(url, settings)
         .then(res => res.json())
         .then((json) => {
-            let listSize = json.data.children.length;
+            let listSize = json.data.election.length;
             // Loop to pick 5 random entries
             for (x = 0; x < 5; x++) {
                 /*
@@ -25,13 +25,29 @@ async function getData() {
     
 
                 /*.......*/
-                
+                let random = randomNumber(0,listSize);
+                let post = json.data.election[random].data;
+                console.log(post)
+                let subreddit = post.subreddit;
+                let author = post.author;
+                let title = post.title;
+                let ups = post.ups;
+                let message = "<b>Subreddit </b>: "+ subreddit + 
+                        " <b>Author</b>:" + author + " <b>Title</b>:" 
+                        + title + " <b>Up votes</b>: " + ups;
+                let select = document.getElementById("redditList");
+                select.innerHTML += "<li>" + message + "</li>"; 
+
+
+
+
                 let addToChart = {'label':author,y:ups}; // Gave this. This needs to be added to the 'chartValues'
                 /*.......*/
+                chartValues.push(addToChart);
             }
         })
         .then(values => console.log(chartValues));
-        //chart.render(); // Do you need to remove the comments from here in order to get it to work?
+        chart.render(); // Do you need to remove the comments from here in order to get it to work?
 };
 
 window.onload = async function makeChart() {
@@ -45,7 +61,7 @@ window.onload = async function makeChart() {
             { 
                 type: "column",
                 name: "Popular Reddit",
-                dataPoints: // WHAT GOES HERE???
+                dataPoints: chartValues
             }
         ]
     });
