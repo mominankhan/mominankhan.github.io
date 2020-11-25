@@ -2,7 +2,7 @@
 let url = "https://www.reddit.com/r/popular.json";
 let chart = "";
 console.log(url);
-//const fetchPromise = fetch(url);
+const fetchPromise = fetch(url);
 
 let settings = { method: "Get" };
 let chartValues = [];
@@ -11,7 +11,7 @@ async function getData() {
     await fetch(url, settings)
         .then(res => res.json())
         .then((json) => {
-            let listSize = json.data.election.length;
+            let listSize = json.data.childrenlength;
             // Loop to pick 5 random entries
             for (x = 0; x < 5; x++) {
                 /*
@@ -26,7 +26,7 @@ async function getData() {
 
                 /*.......*/
                 let random = randomNumber(0,listSize);
-                let post = json.data.election[random].data;
+                let post = json.data.children[random].data;
                 console.log(post)
                 let subreddit = post.subreddit;
                 let author = post.author;
@@ -69,4 +69,4 @@ window.onload = async function makeChart() {
     chart.render();
 }
 
-//window.onload = makeChart();
+window.onload = makeChart();
