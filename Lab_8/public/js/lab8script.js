@@ -28,14 +28,15 @@ async function getData() {
                 let random = Math.floor(listSize * Math.random());
                 let post = json.data.children[random].data;
                 console.log(post)
-                let subreddit = post.subreddit;
-                let author = post.author;
-                let title = post.title;
-                let ups = post.ups;
+                subreddit = post.subreddit;
+                author = post.author;
+                title = post.title;
+                ups = post.ups;
+
                 let message = "<b>Subreddit </b>: "+ subreddit + 
                         " <b>Author</b>:" + author + " <b>Title</b>:" 
                         + title + " <b>Up votes</b>: " + ups;
-                let redditList = document.getElementById("#redditList");
+                let redditList = document.querySelector("#redditList");
                 let li = document.createElement('li');
                 li.innerHTML = message;
                 redditList.appendChild(li);
