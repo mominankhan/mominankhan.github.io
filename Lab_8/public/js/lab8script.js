@@ -2,7 +2,7 @@
 let url = "https://www.reddit.com/r/popular.json";
 let chart = "";
 console.log(url);
-const fetchPromise = fetch(url);
+//const fetchPromise = fetch(url);
 
 let settings = { method: "Get" };
 let chartValues = [];
