@@ -1,7 +1,7 @@
 {
  "name": "khan_lab8",
  "version" : "1.0.0",
- "description": "Lab 8",
+ "description": "Lab 8, an application that will provide random reddit posts that are popular. Display will occur in HTML.",
  "main": "server.js",
  "scripts":{
      "test" : "echo \"Error: no test specified\" && exit 1",
