@@ -11,7 +11,7 @@ async function getData() {
     await fetch(url, settings)
         .then(res => res.json())
         .then((json) => {
-            let listSize = json.data.childrenlength;
+            let listSize = json.data.children.length;
             // Loop to pick 5 random entries
             for (x = 0; x < 5; x++) {
                 /*
@@ -25,7 +25,7 @@ async function getData() {
     
 
                 /*.......*/
-                let random = randomNumber(0,listSize);
+                let random = Math.floor(listSize * Math.random());
                 let post = json.data.children[random].data;
                 console.log(post)
                 let subreddit = post.subreddit;
@@ -35,8 +35,11 @@ async function getData() {
                 let message = "<b>Subreddit </b>: "+ subreddit + 
                         " <b>Author</b>:" + author + " <b>Title</b>:" 
                         + title + " <b>Up votes</b>: " + ups;
-                let select = document.getElementById("redditList");
-                select.innerHTML += "<li>" + message + "</li>"; 
+                let redditList = document.getElementById("#redditList");
+                let li = document.createElement('li');
+                li.innerHTML = message;
+                redditList.appendChild(li);
+               
 
 
 
