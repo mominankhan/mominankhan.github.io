@@ -7,4 +7,6 @@ h1{
     font-size: large;
     color: rgb(233, 154, 90);
     text-shadow: 2px 2px #290808;
+    height:500px;
+    width: 70px;
 }
