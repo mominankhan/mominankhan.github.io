@@ -3,8 +3,8 @@ body {
     animation: mymove 5s infinite;
 }
     @keyframes mymove {
-        from {background-color: #000000;}
-        to {background-color: #ffffff;}
+        from {background-color:#ffffff;}
+        to {background-color: #000000;}
 }
 h1{
     text-align:center;
