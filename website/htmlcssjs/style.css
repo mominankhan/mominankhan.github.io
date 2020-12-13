@@ -10,13 +10,14 @@ body .animation .text {
     position: absolute;
 }
 body .animation p{
+    text-align: center;
     color: #111111;
     margin: 0;
     padding: 0;
     display: inline; 
     padding-left: 5px;
-    font-family: "Gilroy";
-    font-size: 1.5em;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 50px;
     opacity: 0x;
 
 }
