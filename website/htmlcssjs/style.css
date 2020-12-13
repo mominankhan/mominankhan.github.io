@@ -6,11 +6,15 @@ body {
         from {background-color:#ffffff;}
         to {background-color: #000000;}
 }
+.text{
+    text-align: center;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 50px;
+}
 body .animation .text {
     position: absolute;
 }
 body .animation p{
-    text-align: center;
     color: #111111;
     margin: 0;
     padding: 0;
