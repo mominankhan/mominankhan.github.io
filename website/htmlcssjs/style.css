@@ -6,6 +6,20 @@ body {
         from {background-color:#ffffff;}
         to {background-color: #000000;}
 }
+body .animation .text {
+    position: absolute;
+}
+body .animation p{
+    color: #111111;
+    margin: 0;
+    padding: 0;
+    display: inline; 
+    padding-left: 5px;
+    font-family: "Gilroy";
+    font-size: 1.5em;
+    opacity: 0x;
+
+}
 h1{
     text-align:center;
     font-size: 200px;
