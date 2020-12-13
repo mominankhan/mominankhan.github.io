@@ -1,11 +1,17 @@
 body {
     background-color: #ffffff;
-    animation: mymove 5s infinite;
+    animation: mymove 5s;
 }
     @keyframes mymove {
         from {background-color:#ffffff;}
         to {background-color: #000000;}
-        
+
+}
+h1{
+    text-align:center;
+    font-size: 200px;
+    color: rgb(172, 214, 202);
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 body .animation .text {
     position: absolute;
@@ -20,10 +26,4 @@ body .animation p{
     font-size: 50px;
     opacity: 0x;
 
-}
-h1{
-    text-align:center;
-    font-size: 200px;
-    color: rgb(172, 214, 202);
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
