@@ -1,4 +1,7 @@
 body {
+    background-color: #ffffff;
+    animation: mymove 10s;
+}
     @keyframes mymove {
         from {background-color: #000000;}
         to {background-color: #ffffff;}
@@ -8,4 +11,4 @@ h1{
     font-size: 200px;
     color: rgb(172, 214, 202);
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-}}
+}
