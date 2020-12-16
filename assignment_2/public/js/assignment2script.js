@@ -380,8 +380,8 @@ function submitNewGroup() {
     suggestions.innerHTML = html;
   }
 
-  const searchInput = document.getElementById('searchTasks');
-  const suggestions = document.getElementById('searchTasksContent');
+  const searchInput = document.getElementById('SearchTasks');
+  const suggestions = document.getElementById('SearchTasksContent');
 
   searchInput.addEventListener('change', displayMatches);
   searchInput.addEventListener('keyup', displayMatches);
