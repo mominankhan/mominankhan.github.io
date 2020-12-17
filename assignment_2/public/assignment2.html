@@ -135,26 +135,27 @@
             <p id="postNewPersonContent"></p>
 
         </div>
+
         <div class="flexbox-item">
             -- Add New Group --
-            <label for="addGroupName">First Name:</label>
-            <input type="text" id="addFirstName" name="addFirstName"/>
+            <label for="addGroup">Group Name:</label>
+            <input type="text" id="addGroup" name="addGroup"/>
             <br>
-            <button onclick="submitNewGroup()" class="flexbox-button">Add new person</button>
+            <button onclick="submitNewGroup()" class="flexbox-button">Add new group</button>
           
             <p id="postNewGroupContent"></p>
 
-    </div>
-    <div class="flexbox-item">
-        -- Search Tasks --
-            <label for="SearchTasks">Task Name:</label>
-            <input type="text" id="SearchTasks" name="SearchTasks"/>
-            <br>
-            <button onclick="submitNewSearchTask()" class="flexbox-button">Add new person</button>
-          
-            <p id="SearchTasksContent"></p>
+        </div>
 
-    </div>
+        <div class="flexbox-item">
+            -- Search Tasks --
+            <label for="searchTasks">searchTask:</label>
+            <input type="text" id="searchTasks" name="searchTasks" class="search"/>
+            <br>          
+            <ul id="postSearchTask" class="suggestions"></ul>
+
+        </div>
+
     </div>
 </body>
 
