@@ -348,7 +348,7 @@ function submitNewGroup() {
 */
 
 
-
+function submitNewSearchTask() {
   const taskList = [];
   console.log("Called searchTasks");
 
@@ -433,5 +433,5 @@ window.onload = async function loadPage() {
   getPageData();
   getPageData("update");
 
-
+}
 }
