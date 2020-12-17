@@ -296,15 +296,16 @@ function submitNewPerson() {
     });
 
 }
+
 /*
  ------ ADD NEW GROUP ------
 */
 function submitNewGroup() {
 
   console.log("Called submitNewGroup");
-  let name = document.getElementById("addGroupName").value;
+  let name = document.getElementById("addGroup").value;
 
-  console.log("Name:" + name);
+  console.log("name:" + name);
   data = { 'name': name };
 
   //console.log(JSON.stringify(data))
@@ -327,9 +328,9 @@ function submitNewGroup() {
 
       let message = "ERROR";
       if (typeof group.id !== "undefined") {
-        groupName = group.data.name;
+        name = group.data.name;
         groupId = group.id;
-        message = "Message: " + group.message + " groupName: " + name + "<br>groupId: " + groupId + "<br> ";
+        message = "Message: " + group.message + " name: " + name + "<br>groupId: " + groupId + "<br> ";
       }
       else if(typeof group !== "undefined"){
         message = "Message: " + group.message ;
@@ -346,45 +347,42 @@ function submitNewGroup() {
 /*
  ------ SEARCH TASKS ------
 */
+const tasks = [];
 
+fetch('./allTasks', { method: "Get" })
+    .then(res => res.json())
+    .then((json) => {
+      json.data.forEach(element => {
+        tasks.push(element);
+      });
+    })
 
-function submitNewSearchTask() {
-  const taskList = [];
-  console.log("Called searchTasks");
+function findMatches(wordToMatch, taskList) {
+  return taskList.filter(task => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return task.taskName.match(regex)
+  })
+}
 
-  let searchURL = "http://localhost:4000/allTasks";
-
-  fetch(searchURL)
-  .then(blob => blob.json())
-  .then(data => taskList.push(...data.data));
-
-  function findMatches(wordToMatch, taskList) {
-    return taskList.filter(place => {
-      // here we need to figure out if the task matches what was searched
-      const regex = new RegExp(wordToMatch, 'gi');
-      return place.taskName.match(regex)
-    });
-  }
-
-  function displayMatches() {
-    const matchArray = findMatches(this.value, taskList);
-    const html = matchArray.map(place => {
-      const regex = new RegExp(this.value, 'gi');
-      const tasksName = place.taskName.replace(regex, `<span class="hl">${this.value}</span>`);
-      return `
-        <li>
-          <span class="name">${tasksName}</span>
-        </li>
+function displayMatches() {
+  const matchArray = findMatches(this.value, tasks);
+  const html = matchArray.map(task => {
+    const regex = new RegExp(this.value, 'gi');
+    const taskName = task.taskName.replace(regex, `<span class="hl">${this.value}</span>`);
+    return `
+      <li>
+        <span class="name">${taskName}</span>
+      </li>
       `;
-    }).join('');
-    suggestions.innerHTML = html;
-  }
+  }).join('');
+  suggestions.innerHTML = html;
+}
 
-  const searchInput = document.getElementById('SearchTasks');
-  const suggestions = document.getElementById('SearchTasksContent');
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
 
-  searchInput.addEventListener('change', displayMatches);
-  searchInput.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
 
 
 /*
@@ -433,5 +431,5 @@ window.onload = async function loadPage() {
   getPageData();
   getPageData("update");
 
-}
+
 }
